@@ -1,0 +1,59 @@
+{
+  "name": "raycast-youdao-translator",
+  "title": "Youdao Translator",
+  "description": "有道翻译 - 支持中英文自动互翻",
+  "icon": "command-icon.png",
+  "author": "local",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "translate",
+      "title": "Translate",
+      "subtitle": "Youdao",
+      "description": "使用有道翻译查询单词或句子",
+      "mode": "view"
+    },
+    {
+      "name": "translate-selection",
+      "title": "Translate Selection",
+      "subtitle": "Youdao",
+      "description": "翻译选中的文字",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "appKey",
+      "type": "textfield",
+      "required": true,
+      "title": "App Key",
+      "description": "有道智云应用ID",
+      "placeholder": "请输入有道智云 App Key"
+    },
+    {
+      "name": "appSecret",
+      "type": "password",
+      "required": true,
+      "title": "App Secret",
+      "description": "有道智云应用密钥",
+      "placeholder": "请输入有道智云 App Secret"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.64.0",
+    "@raycast/utils": "^1.10.0",
+    "crypto-js": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.3.0"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray fix-lint",
+    "lint": "ray lint"
+  }
+}
