@@ -62,7 +62,7 @@ function ResultItem({ result }: { result: TranslateResult }) {
     try {
       await playPronunciation(result.pronounceText, 'us');
     } catch {
-      // 如果有道发音失败，静默使用 macOS say 作为备选
+      // 如果发音失败，静默使用 macOS say 作为备选
       await playPronunciationWithSay(result.pronounceText);
     }
   }, [result]);
@@ -72,7 +72,7 @@ function ResultItem({ result }: { result: TranslateResult }) {
     try {
       await playPronunciation(result.pronounceText, 'uk');
     } catch {
-      // 如果有道发音失败，静默使用 macOS say 作为备选
+      // 如果发音失败，静默使用 macOS say 作为备选
       await playPronunciationWithSay(result.pronounceText);
     }
   }, [result]);
@@ -102,7 +102,7 @@ function ResultItem({ result }: { result: TranslateResult }) {
             shortcut={{ modifiers: ["ctrl", "shift"], key: "p" }}
           />
           <Action.OpenInBrowser
-            title="有道网页查看"
+            title="词典网页查看"
             url={result.webUrl}
             shortcut={{ modifiers: ["shift"], key: "enter" }}
           />

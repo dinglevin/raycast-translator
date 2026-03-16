@@ -1,7 +1,7 @@
 {
-  "name": "raycast-youdao-translator",
-  "title": "Youdao Translator",
-  "description": "有道翻译 - 支持中英文自动互翻",
+  "name": "raycast-translator",
+  "title": "Translator",
+  "description": "翻译工具 - 支持中英文自动互翻",
   "icon": "command-icon.png",
   "author": "local",
   "license": "MIT",
@@ -9,14 +9,14 @@
     {
       "name": "translate",
       "title": "Translate",
-      "subtitle": "Youdao",
-      "description": "使用有道翻译查询单词或句子",
+      "subtitle": "Translate",
+      "description": "查询单词或句子的翻译",
       "mode": "view"
     },
     {
       "name": "translate-selection",
       "title": "Translate Selection",
-      "subtitle": "Youdao",
+      "subtitle": "Translate",
       "description": "翻译选中的文字",
       "mode": "view"
     }
@@ -27,16 +27,16 @@
       "type": "textfield",
       "required": true,
       "title": "App Key",
-      "description": "有道智云应用ID",
-      "placeholder": "请输入有道智云 App Key"
+      "description": "翻译服务应用ID",
+      "placeholder": "请输入 App Key"
     },
     {
       "name": "appSecret",
       "type": "password",
       "required": true,
       "title": "App Secret",
-      "description": "有道智云应用密钥",
-      "placeholder": "请输入有道智云 App Secret"
+      "description": "翻译服务应用密钥",
+      "placeholder": "请输入 App Secret"
     }
   ],
   "dependencies": {
