@@ -8,9 +8,9 @@
 /* eslint-disable @typescript-eslint/ban-types */
 
 type ExtensionPreferences = {
-  /** App Key - 有道智云应用ID */
+  /** App Key - 翻译服务应用ID */
   "appKey": string,
-  /** App Secret - 有道智云应用密钥 */
+  /** App Secret - 翻译服务应用密钥 */
   "appSecret": string
 }
 
