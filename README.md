@@ -52,12 +52,26 @@ cd raycast-translator
 
 # 安装依赖
 npm install
-
-# 构建
-npm run build
 ```
 
-然后在 Raycast 中导入扩展目录。
+本地使用 **无需** `npm run build`（`ray build` 主要服务于 Raycast Store 发布流程，不会产出可被本地直接加载的 `dist/` 目录）。
+
+### 在 Raycast 中加载扩展
+
+**方式一：开发模式（推荐）**
+
+```bash
+npm run dev
+```
+
+`ray develop` 会自动把扩展注册到 Raycast，命令立即可用。**首次注册成功后即可 `Ctrl+C` 停止该进程，扩展会持续保留在 Raycast 中可用**；仅当修改源码、需要热更新时再次启动即可。
+
+**方式二：手动导入**
+
+1. 打开 Raycast，唤起命令面板（默认 `Option + Space`）
+2. 搜索并执行 `Import Extension` 命令
+3. 在文件选择器中选中本项目根目录（包含 `package.json` 的 `raycast-translator` 目录，注意是源码目录而非编译产物）
+4. 导入成功后，在 Raycast 中搜索 `Translate` 或 `Translate Selection` 即可使用
 
 ## 配置
 
